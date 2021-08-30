@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital@0;1&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-size: 16px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+}
+
+header {
+  background-color: #a8dadc;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Gentium Basic", serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+span,
+p,
+a {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  line-height: 150%;
+}
+
+p {
+  letter-spacing: 0.05em;
+}
+
+.logo {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.5rem;
+
+  border-bottom: 1px solid #000000;
+}
+
+.logo h2 {
+  font-style: italic;
+  text-align: center;
+}
+
+nav {
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color 0.1s ease-in-out;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+nav ul li:hover a {
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+.banner {
+  height: 10rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-position: center center;
+  object-fit: cover;
+}
+
+main {
+  padding: 3rem;
+}
+
+.meist {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+main h2 {
+  margin-bottom: 1.5rem;
+}
+
+.meist .right {
+  display: none;
+}
+
+.cuisine-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  align-items: center;
+}
+
+.cuisine {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.24);
+  background-color: black;
+}
+
+.cuisine img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  object-position: center center;
+  grid-column: 1;
+  grid-row: 1;
+  opacity: 0.5;
+}
+
+.cuisine span {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  place-self: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+footer {
+  padding: 2rem;
+  display: flex;
+  background-color: #f1faee;
+  justify-content: space-between;
+}
+
+footer .left,
+footer .right {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  justify-content: center;
+}
+
+footer .right img {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .banner {
+    height: 20rem;
+  }
+
+  .meist {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+    width: 100%;
+  }
+
+  .meist .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .meist .right {
+    display: block;
+    margin-left: auto;
+  }
+
+  .meist .right img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cuisine-list {
+    flex-direction: row;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .cuisine span {
+    opacity: 0.5;
+    transition: opacity 0.1s ease-in-out;
+  }
+
+  .cuisine img {
+    opacity: 0.8;
+    transition: opacity 0.1s ease-in-out;
+  }
+
+  .cuisine:hover span {
+    opacity: 1;
+  }
+
+  .cuisine:hover img {
+    opacity: 0.5;
+  }
+}
